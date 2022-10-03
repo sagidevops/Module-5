@@ -12,4 +12,5 @@ RUN mvn test
 # Package Stage
 RUN mvn package
 # Copy WAR file to /WORKSPACE
-RUN cp ./target/hello-world-war-1.0.0.war .
+RUN cp /target/hello-world-war-1.0.0.war /opt/tomcat/.jenkins/workspace/Module-5 .
+RUN rm -rf sagi-nir-module-5 sagi-nir-module-5@tmp target src README.md
