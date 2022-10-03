@@ -13,7 +13,7 @@ RUN mvn compile
 RUN mvn test
 # Package Stage
 RUN mvn package
-# Copy WAR file to /root
-RUN cp /home/compile/target/hello-world-war-1.0.0.war /root
-RUN rm -rf /home
-WORKDIR /root
+# Copy WAR file to /WORKSPACE
+RUN cp /home/compile/target/hello-world-war-1.0.0.war /opt/tomcat/.jenkins/workspace/Module 5
+RUN rm -rf /home/compile
+WORKDIR /opt/tomcat/.jenkins/workspace/Module 5
